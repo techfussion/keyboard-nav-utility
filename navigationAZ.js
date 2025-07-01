@@ -3,14 +3,14 @@
  * A standalone JavaScript function that enables keyboard-only navigation
  * between key structural elements on any webpage.
  * 
- * @author NavigationAZ
+ * @author techfussion(raji abdulmumin)
  * @version 1.0.0
  */
 
 function initKeyboardNav() {
     'use strict';
 
-    // Prevent multiple initializations
+    // This pevents multiple initializations
     if (window.keyboardNavInitialized) {
         console.warn('Keyboard navigation already initialized');
         return;
@@ -45,7 +45,7 @@ function initKeyboardNav() {
     ];
 
     /**
-     * Inject CSS styles for focus indication
+     * This function injects CSS styles into elements for focus indication
      */
     function injectStyles() {
         const styleId = 'keyboard-nav-styles';
@@ -477,10 +477,13 @@ function initKeyboardNav() {
 }
 
 // Export for various module systems
-if (typeof module !== 'undefined' && module.exports) {
+if (typeof module !== 'undefined' && module.exports) { 
+    // CommonJS
     module.exports = initKeyboardNav;
 } else if (typeof define === 'function' && define.amd) {
+    // Asynchronous Module Definition (AMD)
     define([], function() { return initKeyboardNav; });
-} else {
+} else { 
+    // Browser ENV
     window.initKeyboardNav = initKeyboardNav;
 }
