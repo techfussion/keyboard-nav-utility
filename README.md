@@ -210,27 +210,6 @@ The utility automatically detects form fields to prevent navigation interference
 - Elements with role="textbox", "searchbox", "combobox", "spinbutton"
 ```
 
-## 🧪 Testing & Validation
-
-### Automated Testing
-
-The utility has been tested across:
-- **Websites**: Reddit, GitHub, Wikipedia, news sites, e-commerce platforms
-- **Browsers**: Chrome 120+, Firefox 119+, Edge 119+, Safari 17+
-- **Frameworks**: React, Vue, Angular SPAs with dynamic content
-- **Accessibility Tools**: axe-core, WAVE, screen reader compatibility
-
-### Manual Testing Checklist
-
-- [ ] Headers navigate in correct document order
-- [ ] Links are properly detected and focusable
-- [ ] Landmarks include both semantic HTML and ARIA roles
-- [ ] Dynamic content updates are detected automatically
-- [ ] Form fields properly disable navigation shortcuts
-- [ ] Focus indicators are clearly visible on all backgrounds
-- [ ] Navigation wraps around correctly at array boundaries
-- [ ] Arrow keys change direction for all subsequent navigation
-
 ## 🏗️ Assumptions & Design Decisions
 
 ### Element Scanning Assumptions
@@ -291,12 +270,6 @@ The utility has been tested across:
 
 ## 📊 Performance Metrics
 
-### Benchmarks (tested on average hardware)
-- **Initial Scan**: < 10ms for typical webpage (500 elements)
-- **Rescan Time**: < 5ms for incremental updates
-- **Memory Usage**: < 1MB for element storage
-- **Event Response**: < 1ms for keyboard events
-
 ### Optimization Techniques
 - Debounced DOM scanning (100ms)
 - Efficient element filtering algorithms
@@ -333,7 +306,7 @@ initKeyboardNav();
 
 ## 📄 License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the Apache License - see the [LICENSE](LICENSE) file for details.
 
 ## 🤝 Contributing
 
